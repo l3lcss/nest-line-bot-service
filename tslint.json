@@ -1,10 +1,13 @@
 {
   "defaultSeverity": "error",
-  "extends": ["tslint:recommended"],
+  "extends": [
+    "tslint:recommended"
+  ],
   "jsRules": {
     "no-unused-expression": true
   },
   "rules": {
+    "newline-before-return": true,
     "quotemark": [true, "single"],
     "member-access": [false],
     "ordered-imports": [false],
@@ -12,7 +15,35 @@
     "member-ordering": [false],
     "interface-name": [false],
     "arrow-parens": false,
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "max-classes-per-file": false,
+    "semicolon": [true, "never"],
+    "trailing-comma": [true, { "multiline": "never" }],
+    "promise-function-async": [true,"check-function-declaration", "check-method-declaration"],
+    "no-eval": false,
+    "indent": [true, "spaces", 2],
+    "await-promise": [true, "Thenable"],
+    "no-return-await": true,
+    "no-unused-variable": [true, { "ignore-pattern": "^_" }],
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "allow-leading-underscore",
+        "allow-pascal-case",
+        "require-const-for-all-caps"
+      ]
+    },
+    "no-use-before-declare": true,
+    "no-var-keyword": true,
+    "arrow-return-shorthand": [true, "multiline"],
+    "binary-expression-operand-order": true,
+    "class-name": true,
+    "file-name-casing": [true, { ".ts": "kebab-case" }],
+    "no-boolean-literal-compare": true,
+    "one-variable-per-declaration": [true, "ignore-for-loop"],
+    "eofline": true,
+    "no-floating-promises": true
   },
   "rulesDirectory": []
 }
