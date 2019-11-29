@@ -1,1 +1,1 @@
-web: npm run start:dev
+web: node dist/main.js

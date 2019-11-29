@@ -6,8 +6,6 @@ describe('AppController', () => {
   let appController: AppController
 
   beforeEach(async () => {
-    console.log(`beforeEach()`)
-
     const app: TestingModule = await Test.createTestingModule({
       controllers: [AppController],
       providers: [AppService]
@@ -17,8 +15,6 @@ describe('AppController', () => {
   })
 
   describe('root', () => {
-    console.log(`describe('root')`)
-
     it('should return "Hello World!"', () => {
       expect(appController.getHello()).toBe('Hello World!')
     })
