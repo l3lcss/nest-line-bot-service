@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noUnusedLocals": true,
     "module": "commonjs",
     "declaration": false,
     "removeComments": true,
@@ -8,7 +9,12 @@
     "target": "es6",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./"
+    "baseUrl": "./*",
+    "paths": {
+      "src/*": ["./src/*"]
+    }
   },
-  "exclude": ["node_modules", "test", "**/*spec.ts"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "test", "**/*spec.ts", ".history"],
+  "compileOnSave":  true
 }
