@@ -9,6 +9,7 @@ import { AudioHandler } from './line-handler/message/types/audio.handler'
 import { LocationHandler } from './line-handler/message/types/location.handler'
 import { StickerHandler } from './line-handler/message/types/sticker.handler'
 import { PostbackHandler } from './line-handler/postback/postback.handler'
+import { ContactAdminContext } from './line-handler/message/types/text-context/contact-admin.context'
 
 @Module({
   providers: [
@@ -20,7 +21,8 @@ import { PostbackHandler } from './line-handler/postback/postback.handler'
     AudioHandler,
     LocationHandler,
     StickerHandler,
-    PostbackHandler
+    PostbackHandler,
+    ContactAdminContext
   ],
   controllers: [
     LineController
