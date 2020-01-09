@@ -25,6 +25,7 @@
     "@nestjs/core": "^6.10.14",
     "@nestjs/platform-express": "^6.10.14",
     "dotenv": "^8.2.0",
+    "firebase": "^7.6.1",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.3.3"

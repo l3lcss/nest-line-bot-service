@@ -10,6 +10,7 @@ import { LocationHandler } from './line-handler/message/types/location.handler'
 import { StickerHandler } from './line-handler/message/types/sticker.handler'
 import { PostbackHandler } from './line-handler/postback/postback.handler'
 import { ContactAdminContext } from './line-handler/message/types/text-context/contact-admin.context'
+import { UserService } from './services/user.service'
 
 @Module({
   providers: [
@@ -22,7 +23,8 @@ import { ContactAdminContext } from './line-handler/message/types/text-context/c
     LocationHandler,
     StickerHandler,
     PostbackHandler,
-    ContactAdminContext
+    ContactAdminContext,
+    UserService
   ],
   controllers: [
     LineController
