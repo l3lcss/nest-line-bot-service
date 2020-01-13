@@ -7,14 +7,13 @@ import { RESPONSE_MODE, REPLY_MESSAGE_TYPE } from '../../../../const/line.const'
 @Injectable()
 export class ContactAdminContext {
   async handleByMessageContext(messageEvent: MessageEventPayload): Promise<any> {
-    // [TODO] get user information from line-api to add to rtdb
     const { replyToken } = messageEvent
+
+    const userProfile = await client.getProfile(messageEvent.source.userId)
 
     await db.ref(`users/${messageEvent.source.userId}/messageEvents`).push(messageEvent)
     await db.ref(`users/${messageEvent.source.userId}`).update({
-      informations: {
-        name: 'default'
-      },
+      userProfile,
       responseMode: RESPONSE_MODE.LIVE_CHAT
     })
 
