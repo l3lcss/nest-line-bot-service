@@ -23,7 +23,7 @@
     "@line/bot-sdk": "^6.8.4",
     "@nestjs/common": "^6.10.14",
     "@nestjs/core": "^6.10.14",
-    "@nestjs/platform-express": "^6.10.14",
+    "@nestjs/platform-express": "^9.2.1",
     "dotenv": "^8.2.0",
     "firebase": "^7.6.1",
     "reflect-metadata": "^0.1.12",
